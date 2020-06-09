@@ -1,0 +1,136 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`helpers:sales get sales sorted by month should get sales sorted by a specified key ascend 1`] = `
+Array [
+  Object {
+    "date": 3,
+    "month": 1,
+    "salePrice": 12,
+    "transationId": "sdfsdf",
+  },
+  Object {
+    "date": 4,
+    "month": 1,
+    "salePrice": 12,
+    "transationId": "sdfsdf",
+  },
+  Object {
+    "date": 3,
+    "month": 1,
+    "salePrice": 12,
+    "transationId": "sdfsdf",
+  },
+  Object {
+    "date": 3,
+    "month": 1,
+    "salePrice": 12,
+    "transationId": "sdfsdf",
+  },
+  Object {
+    "date": 3,
+    "month": 1,
+    "salePrice": 12,
+    "transationId": "sdfsdf",
+  },
+  Object {
+    "date": 3,
+    "month": 1,
+    "salePrice": 12,
+    "transationId": "sdfsdf",
+  },
+  Object {
+    "date": 3,
+    "month": 1,
+    "salePrice": 12,
+    "transationId": "sdfsdf",
+  },
+  Object {
+    "date": 3,
+    "month": 5,
+    "salePrice": 12,
+    "transationId": "sdfsdf",
+  },
+  Object {
+    "date": 3,
+    "month": 5,
+    "salePrice": 12,
+    "transationId": "sdfsdf",
+  },
+  Object {
+    "date": 3,
+    "month": 7,
+    "salePrice": 12,
+    "transationId": "sdfsdf",
+  },
+  Object {
+    "date": 3,
+    "month": 9,
+    "salePrice": 12,
+    "transationId": "sdfsdf",
+  },
+  Object {
+    "date": 3,
+    "month": 11,
+    "salePrice": 12,
+    "transationId": "sdfsdf",
+  },
+]
+`;
+
+exports[`helpers:sales should calculate and return a list of average sales for each quarter 1`] = `
+Array [
+  Object {
+    "averagePrices": 12,
+    "quarter": 1,
+    "transactionNums": 7,
+  },
+  Object {
+    "averagePrices": 12,
+    "quarter": 2,
+    "transactionNums": 2,
+  },
+  Object {
+    "averagePrices": 12,
+    "quarter": 3,
+    "transactionNums": 2,
+  },
+  Object {
+    "averagePrices": 12,
+    "quarter": 4,
+    "transactionNums": 1,
+  },
+]
+`;
+
+exports[`helpers:sales should calculate and return a list of total sales (sum) for each quarter 1`] = `
+Array [
+  Object {
+    "quarter": 1,
+    "totalPrices": 84,
+    "transactionNums": 7,
+  },
+  Object {
+    "quarter": 2,
+    "totalPrices": 24,
+    "transactionNums": 2,
+  },
+  Object {
+    "quarter": 3,
+    "totalPrices": 24,
+    "transactionNums": 2,
+  },
+  Object {
+    "quarter": 4,
+    "totalPrices": 12,
+    "transactionNums": 1,
+  },
+]
+`;
+
+exports[`helpers:sales should get a quarterSumItem 1`] = `
+Object {
+  "quarter": 1,
+  "totalPrices": 84,
+  "transactionNums": 7,
+}
+`;

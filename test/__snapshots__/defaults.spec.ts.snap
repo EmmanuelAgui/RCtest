@@ -1,0 +1,169 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`defaults,main functions should calculate and return a list of average sales for each quarter 1`] = `
+Array [
+  Object {
+    "averagePrices": 12,
+    "quarter": 1,
+    "transactionNums": 7,
+  },
+  Object {
+    "averagePrices": 12,
+    "quarter": 2,
+    "transactionNums": 2,
+  },
+  Object {
+    "averagePrices": 12,
+    "quarter": 3,
+    "transactionNums": 2,
+  },
+  Object {
+    "averagePrices": 12,
+    "quarter": 4,
+    "transactionNums": 1,
+  },
+]
+`;
+
+exports[`defaults,main functions should calculate and return a list of total sales (sum) for each quarter 1`] = `
+Array [
+  Object {
+    "quarter": 1,
+    "totalPrices": 84,
+    "transactionNums": 7,
+  },
+  Object {
+    "quarter": 2,
+    "totalPrices": 24,
+    "transactionNums": 2,
+  },
+  Object {
+    "quarter": 3,
+    "totalPrices": 24,
+    "transactionNums": 2,
+  },
+  Object {
+    "quarter": 4,
+    "totalPrices": 12,
+    "transactionNums": 1,
+  },
+]
+`;
+
+exports[`defaults,main functions should sort extensions by "firstName" + "lastName" + "ext" ASC 1`] = `
+Array [
+  Object {
+    "ext": "adfx",
+    "extType": "AO",
+    "firstName": "adfsdf",
+    "lastName": "xxddx",
+  },
+  Object {
+    "ext": "adfx",
+    "extType": "VirtualUser",
+    "firstName": "bwerew",
+    "lastName": "",
+  },
+  Object {
+    "ext": "adfx",
+    "extType": "AO",
+    "firstName": "cvfg",
+    "lastName": "hts",
+  },
+  Object {
+    "ext": "adfx",
+    "extType": "Dept",
+    "firstName": "dfd",
+    "lastName": "",
+  },
+  Object {
+    "ext": "adfx",
+    "extType": "Dept",
+    "firstName": "dfdf",
+    "lastName": "dfs",
+  },
+  Object {
+    "ext": "",
+    "extType": "DigitalUser",
+    "firstName": "reer",
+    "lastName": "dfg",
+  },
+  Object {
+    "ext": "",
+    "extType": "VirtualUser",
+    "firstName": "rtfgh",
+    "lastName": "sfdf",
+  },
+  Object {
+    "ext": "",
+    "extType": "VirtualUser",
+    "firstName": "sfwf",
+    "lastName": "ffdfg",
+  },
+  Object {
+    "ext": "adfx",
+    "extType": "Dept",
+    "firstName": "weewr",
+    "lastName": "derter",
+  },
+]
+`;
+
+exports[`defaults,main functions should sort extensions by extType follow these orders ASC 1`] = `
+Array [
+  Object {
+    "ext": "",
+    "extType": "DigitalUser",
+    "firstName": "reer",
+    "lastName": "dfg",
+  },
+  Object {
+    "ext": "",
+    "extType": "VirtualUser",
+    "firstName": "rtfgh",
+    "lastName": "sfdf",
+  },
+  Object {
+    "ext": "",
+    "extType": "VirtualUser",
+    "firstName": "sfwf",
+    "lastName": "ffdfg",
+  },
+  Object {
+    "ext": "adfx",
+    "extType": "VirtualUser",
+    "firstName": "bwerew",
+    "lastName": "",
+  },
+  Object {
+    "ext": "adfx",
+    "extType": "AO",
+    "firstName": "adfsdf",
+    "lastName": "xxddx",
+  },
+  Object {
+    "ext": "adfx",
+    "extType": "AO",
+    "firstName": "cvfg",
+    "lastName": "hts",
+  },
+  Object {
+    "ext": "adfx",
+    "extType": "Dept",
+    "firstName": "dfdf",
+    "lastName": "dfs",
+  },
+  Object {
+    "ext": "adfx",
+    "extType": "Dept",
+    "firstName": "dfd",
+    "lastName": "",
+  },
+  Object {
+    "ext": "adfx",
+    "extType": "Dept",
+    "firstName": "weewr",
+    "lastName": "derter",
+  },
+]
+`;
