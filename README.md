@@ -1,9 +1,14 @@
 # RCtest
-##install
-npm install
+###install
+```bash
+$ npm install
+```
 
-##run
-npm start
-
-##test
-npm test
+###run
+```bash
+$ npm start
+```
+###test
+```bash
+$ npm test
+```
