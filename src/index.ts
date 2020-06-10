@@ -2,13 +2,13 @@ import { ExtensionFun, Extension, EXT_TYPE, SaleItem, QuarterSumItem, QuarterAve
 import { setFullNameOfExtensions, sortExtensionsByKey, getSortedExtensions, setExtTypeNumOfExtensions } from "./helpers/extensions";
 import { sortSaleItems, sumSalesByQuarter, getQuarterAverageFrom } from "./helpers/sales";
 import { myExtensions, mySaleItems } from "./mock/data";
-  
+
 /**
     extensions is an Array and each item has such format:
     {firstName: 'xxx', lastName: 'xxx', ext: 'xxx', extType: 'xxx'}
     lastName, ext can be empty, extType can only has "DigitalUser", "VirtualUser","FaxUser","Dept","AO".
 **/
-  
+
 /**
     Question 1: sort extensions by "firstName" + "lastName" + "ext" ASC
 **/
@@ -57,7 +57,7 @@ export let sortExtensionsByExtType: ExtensionFun = (extensions: Extension[]): Ex
         {....}
     ]
 **/
-export function sumByQuarter(saleItems: SaleItem[]): QuarterSumItem[]{
+export function sumByQuarter(saleItems: SaleItem[]): QuarterSumItem[] {
     let result: QuarterSumItem[]
     // sort saleItems by month
     saleItems = sortSaleItems(saleItems);
@@ -73,7 +73,7 @@ export function sumByQuarter(saleItems: SaleItem[]): QuarterSumItem[]{
     ]
 **/
 
-export function averageByQuarter(saleItems: SaleItem[]): QuarterAverageItem[]{
+export function averageByQuarter(saleItems: SaleItem[]): QuarterAverageItem[] {
     let result: QuarterAverageItem[];
     // calcuate totalPrices and transactionNums of each quarter
     let sumResult: QuarterSumItem[] = sumByQuarter(saleItems);
@@ -86,7 +86,7 @@ let quarterSumItems = sumByQuarter(mySaleItems);
 console.log(quarterSumItems);
 let quarterAverageItems = averageByQuarter(mySaleItems);
 console.log(quarterAverageItems);
-  
+
 /**
     Question 5: please create a tool to generate Sequence
     Expected to be used like:
@@ -102,22 +102,22 @@ console.log(quarterAverageItems);
 // js Singleton
 export const Sequence = (function () {
     // store instance
-    let _instance:any=null;
+    let _instance: any = null;
 
     const Sequence = function () {
-    if (_instance) return _instance;// return the instance exist
-    // @ts-ignore
-    _instance = this;
-    // @ts-ignore
-    this.init();
-    return _instance;
+        if (_instance) return _instance;// return the instance exist
+        // @ts-ignore
+        _instance = this;
+        // @ts-ignore
+        this.init();
+        return _instance;
     }
 
     Sequence.prototype.init = function () {
-    _instance.source = 0;
+        _instance.source = 0;
     }
     Sequence.prototype.next = function () {
-    return ++_instance.source;
+        return ++_instance.source;
     }
 
     return Sequence
@@ -130,6 +130,7 @@ console.log(s1.next());
 console.log(s2.next());
 console.log(s1.next());
 
+
 /**
      Question 6:
     AllKeys: 0-9;
@@ -137,7 +138,7 @@ console.log(s1.next());
     We want to get an array which contains all the unused keys,in this example it would be: [0,1,5,6,7,8,9]
 **/
 
-export function getUnUsedKeys<T>(allKeys:T[], usedKeys:T[]):T[]{
+export function getUnUsedKeys<T>(allKeys: T[], usedKeys: T[]): T[] {
     // @ts-ignore
     let unUsedKeys: T[] = allKeys.filter(key => !usedKeys.includes(key));
     return unUsedKeys;
@@ -147,4 +148,3 @@ export function getUnUsedKeys<T>(allKeys:T[], usedKeys:T[]):T[]{
 // let usedKeys = [2, 3, 4];
 // let unUsedKeys = getUnUsedKeys(allKeys, usedKeys);
 // console.log(unUsedKeys);
-  

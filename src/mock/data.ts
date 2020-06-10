@@ -85,4 +85,3 @@ export let mySaleItems = [
         salePrice: 12
     }
 ];
-  
