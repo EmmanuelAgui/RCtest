@@ -7,7 +7,7 @@ export function sortSaleItems(saleItems: SaleItem[]): SaleItem[] {
 
 export function getQuarterFromMonth(month: number): number {
     if (month > 12 || month < 1) {
-        throw Error('Please input a correct month');
+        throw new TypeError('Please input a correct month');
     }
     if (month > 0 && month <= 3) {
         return 1;

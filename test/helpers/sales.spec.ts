@@ -12,8 +12,7 @@ describe('helpers:sales', () => {
     })
 
     test('should get quarter map from month', () => {
-        // const error:any = getQuarterFromMonth(14);
-        // expect(error instanceof Error).toBeTruthy();
+        expect(() => {getQuarterFromMonth(14)}).toThrow(TypeError);
 
         let quarter = getQuarterFromMonth(2);
         expect(quarter).toBe(1);
@@ -44,14 +43,6 @@ describe('helpers:sales', () => {
     })
 
     test('should get a quarterSumItem', () => {
-        // let newQuarterSumItems:QuarterSumItem[]=[];
-        // let quarterSumItemNew:QuarterSumItem = getQuarterSumItem(1,newQuarterSumItems);
-        // expect(quarterSumItemNew).toEqual({
-        //     quarter:1,
-        //     totalPrices:0,
-        //     transactionNums:0
-        // })
-
         let quarterSumItemOld = getQuarterSumItem(1, quarterSumItems);
         expect(quarterSumItemOld).toMatchSnapshot();
     })
