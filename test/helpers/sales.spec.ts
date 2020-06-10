@@ -12,7 +12,9 @@ describe('helpers:sales', () => {
     })
 
     test('should get quarter map from month', () => {
-        expect(() => {getQuarterFromMonth(14)}).toThrow(TypeError);
+        expect(() => getQuarterFromMonth(-1)).toThrow(TypeError);
+        expect(() => getQuarterFromMonth(0)).toThrow(TypeError);
+        expect(() => getQuarterFromMonth(14)).toThrow(TypeError);
 
         let quarter = getQuarterFromMonth(2);
         expect(quarter).toBe(1);
